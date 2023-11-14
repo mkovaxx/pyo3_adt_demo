@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "pyo3-adt-demo"
+version = "0.1.0"
+description = "Demo of full ADT support for PyO3"
+authors = ["Mate Kovacs <mkovaxx@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+maturin = "1.3.1"
+
+[build-system]
+requires = ["maturin==1.3.1"]
+build-backend = "maturin"
+
+[tool.maturin]
+# "extension-module" tells pyo3 we want to build an extension module (skips linking against libpython.so)
+features = ["pyo3/extension-module"]
+module-name = "adt_stuff"
+python-source = "./python"
