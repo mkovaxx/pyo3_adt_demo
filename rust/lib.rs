@@ -8,6 +8,13 @@ fn py_compnet(_py: Python<'_>, m: &PyModule) -> PyResult<()> {
 }
 
 #[pyclass]
+pub enum NonTrivialEnum {
+    Int { i: i32 },
+    Float { f: f64 },
+    Str { s: String },
+}
+
+#[pyclass]
 pub enum DayOfTheWeek {
     Sunday,
     Monday,
