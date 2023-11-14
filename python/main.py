@@ -1,4 +1,3 @@
-#!/bin/env python
 import adt_stuff as adt
 
 
