@@ -11,3 +11,9 @@ Demo of full ADT support for PyO3
 ## How to Run
 
 `poetry run python python/main.py`
+
+## How to Debug
+
+```
+cargo +nightly rustc --profile=check -- -Zunpretty=expanded > expanded.rs; rustfmt expanded.rs
+```
