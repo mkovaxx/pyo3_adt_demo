@@ -6,8 +6,9 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-pyo3 = { path = "../../pyo3" }
+pyo3 = { features = ["extension-module"], path = "../../pyo3" }
 
 [lib]
-name = "rust"
+name = "adt_stuff"
+crate-type = ["cdylib"]
 path = "lib.rs"
