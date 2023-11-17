@@ -1,4 +1,4 @@
-use pyo3::{pyclass, pymodule, types::PyModule, PyResult, Python};
+use pyo3::{pyclass, pymodule, types::PyModule, PyResult, Python, pymethods};
 
 #[pymodule]
 #[pyo3(name = "adt_stuff")]
@@ -14,6 +14,18 @@ pub struct SimpleStruct {
     pub i: i32,
     pub f: f64,
     pub s: String,
+}
+
+#[pymethods]
+impl SimpleStruct {
+    #[new]
+    fn new(i: i32, f: f64, s: String) -> Self {
+        Self {
+            i,
+            f,
+            s,
+        }
+    }
 }
 
 #[pyclass]

@@ -28,6 +28,8 @@ def print_thing(thing: adt.ComplexEnum.Int):
             print(f"My favorite float is {x}")
         case adt.ComplexEnum.Str(s=x):
             print(f"My favorite string is {x}")
+        case _:
+            print("I don't know what this is ¯\_(ツ)_/¯")
 
 
 if __name__ == "__main__":
