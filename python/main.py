@@ -18,6 +18,7 @@ def main():
     for favorite in favorites:
         print(type(favorite))
         print_thing(favorite)
+        print_thing(adt.do_stuff(favorite))
 
 
 def print_thing(thing: adt.ComplexEnum.Int):
